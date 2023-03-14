@@ -36,4 +36,8 @@ public class ToolService {
     public Optional<Tool> searchToolByBrand(Integer brand_id){
         return Repo.findByBrandId(brand_id);
     }
+
+    public Optional<Tool> searchToolByCity(Integer City_id){
+        return Repo.findByCityId(City_id);
+    }
 }
