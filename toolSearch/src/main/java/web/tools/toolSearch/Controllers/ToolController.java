@@ -23,17 +23,17 @@ public class ToolController {
         return tools.searchToolById(ID);
     }
 
-    @GetMapping(value="/get_tool/{name}",produces = {MediaType.APPLICATION_JSON_VALUE})
-    public Optional<Tool> getToolByName(@PathVariable String name){
+    @GetMapping(value="/get_tool_name",produces = {MediaType.APPLICATION_JSON_VALUE})
+    public Optional<Tool> getToolByName(@RequestBody String name){
         return tools.searchToolByName(name);
     }
 
-    @GetMapping(value="/get_tool/{brand_id}",produces = {MediaType.APPLICATION_JSON_VALUE})
+    @GetMapping(value="/get_tool_brand/{brand_id}",produces = {MediaType.APPLICATION_JSON_VALUE})
     public Optional<Tool> getToolByName(@PathVariable Integer brand_id){
         return tools.searchToolByBrand(brand_id);
     }
 
-    @GetMapping(value="/get_tool/{city_id}",produces = {MediaType.APPLICATION_JSON_VALUE})
+    @GetMapping(value="/get_tool_city/{city_id}",produces = {MediaType.APPLICATION_JSON_VALUE})
     public Optional<Tool> getToolByCity(@PathVariable Integer city_id){
         return tools.searchToolByCity(city_id);
     }

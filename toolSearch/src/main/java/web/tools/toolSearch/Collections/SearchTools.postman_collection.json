@@ -1,0 +1,110 @@
+{
+	"info": {
+		"_postman_id": "46a5c74a-94fb-495b-8ae9-4d5d619b79ac",
+		"name": "SearchTools",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26277424"
+	},
+	"item": [
+		{
+			"name": "GETALLTOOLS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/get_tools",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"get_tools"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GETTOOLBYID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/get_tool/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"get_tool",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GETTOOLBYNAME",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "serrucho"
+				},
+				"url": {
+					"raw": "localhost:8080/get_tool_name",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"get_tool_name"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GETTOOLBYBRANDID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/get_tool_brand/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"get_tool_brand",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GETTOOLBYCITYID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/get_tool_city/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"get_tool_city",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,13 +1,11 @@
 package web.tools.toolSearch.Entities;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.util.List;
 
 @Entity
 @Data
@@ -17,4 +15,7 @@ public class City implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer city_id;
     private String name;
+
+    @ManyToMany(mappedBy = "cities")
+    private List<Tool> availability;
 }
