@@ -1,0 +1,13 @@
+package web.tools.toolSearch;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class ToolSearchApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(ToolSearchApplication.class, args);
+	}
+
+}
