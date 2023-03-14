@@ -89,18 +89,29 @@
 		},
 		{
 			"name": "GETTOOLBYCITYID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
 			"request": {
 				"method": "GET",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"name\": \"cali\",\r\n    \"city_id\": 1\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
-					"raw": "localhost:8080/get_tool_city/1",
+					"raw": "localhost:8080/get_tool_city",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"get_tool_city",
-						"1"
+						"get_tool_city"
 					]
 				}
 			},

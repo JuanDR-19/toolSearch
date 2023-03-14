@@ -1,6 +1,7 @@
 package web.tools.toolSearch.Entities;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -17,5 +18,6 @@ public class City implements Serializable {
     private String name;
 
     @ManyToMany(mappedBy = "cities")
+    @JsonIgnore
     private List<Tool> availability;
 }
