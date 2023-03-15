@@ -1,5 +1,6 @@
 package web.tools.toolSearch.Services;
 
+import web.tools.toolSearch.Entities.Brand;
 import web.tools.toolSearch.Entities.City;
 import web.tools.toolSearch.Entities.Tool;
 import web.tools.toolSearch.Repositories.ToolRepository;
@@ -34,11 +35,11 @@ public class ToolService {
         return Repo.findByName(Name);
     }
 
-    public Optional<Tool> searchToolByBrand(Integer brand_id){
-        return Repo.findByBrandId(brand_id);
+    public Optional<Tool> searchToolByBrand(Integer brand){
+        return Repo.findByBrandId(brand);
     }
 
-    public Optional<Tool> searchToolByCity(City city){
-        return Repo.findByCityId(city);
+    public Optional<Tool> searchToolByCity(City city_id){
+        return Repo.findByCityId(city_id);
     }
 }

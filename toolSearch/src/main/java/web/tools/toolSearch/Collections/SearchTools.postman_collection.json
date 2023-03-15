@@ -69,7 +69,7 @@
 			"response": []
 		},
 		{
-			"name": "GETTOOLBYBRANDID",
+			"name": "GETTOOLBYBRAND",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -97,7 +97,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\r\n    \"name\": \"cali\",\r\n    \"city_id\": 1\r\n    \r\n}",
+					"raw": "{\r\n  \"city_id\": 2,\r\n  \"name\": \"bogota\"\r\n}\r\n",
 					"options": {
 						"raw": {
 							"language": "json"

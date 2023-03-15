@@ -1,4 +1,5 @@
 package web.tools.toolSearch.Controllers;
+import web.tools.toolSearch.Entities.Brand;
 import web.tools.toolSearch.Entities.City;
 import web.tools.toolSearch.Entities.Tool;
 import web.tools.toolSearch.Services.ToolService;
@@ -30,7 +31,7 @@ public class ToolController {
     }
 
     @GetMapping(value="/get_tool_brand/{brand_id}",produces = {MediaType.APPLICATION_JSON_VALUE})
-    public Optional<Tool> getToolByName(@PathVariable Integer brand_id){
+    public Optional<Tool> getToolByBrandId(@PathVariable Integer brand_id){
         return tools.searchToolByBrand(brand_id);
     }
 
