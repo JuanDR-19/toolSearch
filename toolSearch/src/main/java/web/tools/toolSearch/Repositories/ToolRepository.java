@@ -2,13 +2,10 @@ package web.tools.toolSearch.Repositories;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
-import web.tools.toolSearch.Entities.Brand;
 import web.tools.toolSearch.Entities.City;
 import web.tools.toolSearch.Entities.Tool;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
 
-import java.util.ArrayList;
 import java.util.Optional;
 
 

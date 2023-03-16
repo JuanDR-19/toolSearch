@@ -1,6 +1,5 @@
 package web.tools.toolSearch.Services;
 
-import web.tools.toolSearch.Entities.Brand;
 import web.tools.toolSearch.Entities.City;
 import web.tools.toolSearch.Entities.Tool;
 import web.tools.toolSearch.Repositories.ToolRepository;
