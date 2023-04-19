@@ -1,6 +1,5 @@
 package web.tools.toolSearch.Controllers;
 
-import web.tools.toolSearch.Entities.City;
 import web.tools.toolSearch.Entities.Tool;
 import web.tools.toolSearch.Services.ToolService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,23 +24,16 @@ public class ToolController {
         return tools.searchToolById(ID);
     }
 
-    @GetMapping(value="/get_tool_name",produces = {MediaType.APPLICATION_JSON_VALUE})
-    public Optional<Tool> getToolByName(@RequestBody String name){
+    @GetMapping(value="/get_tool_name/{name}",produces = {MediaType.APPLICATION_JSON_VALUE})
+    @CrossOrigin(origins = "http://localhost:4200")
+    public ArrayList<Tool> getToolByName(@PathVariable String name){
         return tools.searchToolByName(name);
     }
 
-    @GetMapping(value="/get_tool_brand/{brand_id}",produces = {MediaType.APPLICATION_JSON_VALUE})
-    public Optional<Tool> getToolByBrandId(@PathVariable Integer brand_id){
-        return tools.searchToolByBrand(brand_id);
+    @GetMapping(value="/get_tool_brand/{name}",produces = {MediaType.APPLICATION_JSON_VALUE})
+    @CrossOrigin(origins = "http://localhost:4200")
+    public ArrayList<Tool> getToolByBrand(@PathVariable String name){
+        return tools.searchToolsByBrandName(name);
     }
-
-    @GetMapping(value="/get_tool_city",produces = {MediaType.APPLICATION_JSON_VALUE})
-    public Optional<Tool> getToolByCity(@RequestBody City city_id){
-        return tools.searchToolByCity(city_id);
-    }
-
-
-
-
 
 }

@@ -1,6 +1,5 @@
 package web.tools.toolSearch.Services;
 
-import web.tools.toolSearch.Entities.City;
 import web.tools.toolSearch.Entities.Tool;
 import web.tools.toolSearch.Repositories.ToolRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,14 +13,6 @@ public class ToolService {
     @Autowired
     ToolRepository Repo;
 
-    public ToolRepository getRepo() {
-        return Repo;
-    }
-
-    public void setRepo(ToolRepository repo) {
-        Repo = repo;
-    }
-
     public ArrayList<Tool> SearchAll(){
         return (ArrayList<Tool>) Repo.findAll();
     }
@@ -30,15 +21,13 @@ public class ToolService {
         return Repo.findById(id);
     }
 
-    public Optional<Tool> searchToolByName(String Name){
+    public ArrayList<Tool> searchToolByName(String Name){
         return Repo.findByName(Name);
     }
 
-    public Optional<Tool> searchToolByBrand(Integer brand){
-        return Repo.findByBrandId(brand);
+
+    public ArrayList<Tool> searchToolsByBrandName(String brandName) {
+        return Repo.findByBrandName(brandName);
     }
 
-    public Optional<Tool> searchToolByCity(City city_id){
-        return Repo.findByCityId(city_id);
-    }
 }

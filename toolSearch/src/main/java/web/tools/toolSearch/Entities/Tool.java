@@ -25,4 +25,19 @@ public class Tool implements Serializable {
     private List<City> cities;
     private Integer quantity;
 
+    @Override
+    public String toString() {
+        return "Tool{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", img='" + img + '\'' +
+                ", description='" + description + '\'' +
+                ", brand_id=" + brand_id +
+                ", price=" + price +
+                ", cities=" + cities +
+                ", quantity=" + quantity +
+                '}';
+    }
+
+
 }
